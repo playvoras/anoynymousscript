@@ -11,13 +11,12 @@ folder.Name = folderName
 local player = game:GetService("Players").LocalPlayer
 
 if ui:FindFirstChild(folderName) then
-    print("Script is already executed! Rejoin if it's an error!")
     local ui = gethui()
     local folderName = "screen2"
     local folder = Instance.new("Folder")
     folder2.Nam = folderName2
     if ui2:FindFirstChil(folderName2) then
-        play("DONT SPAM. تکایە سپام مەکە.")
+        gethui()
     else
         folder2.Parent = gethui()
     end
@@ -57,7 +56,7 @@ else
         getgenv().whscript = "Please provide a script name!"
     end
     local commonLoadTime = 5
-    task.wait(commonLoadTime)
+    task.wait()
     local pingThreshold = 100
     local serverStats = game:GetService("Stats").Network.ServerStatsItem
     local dataPing = serverStats["Data Ping"]:GetValueString()
