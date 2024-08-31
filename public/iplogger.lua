@@ -1,6 +1,6 @@
 --// Config
 getgenv().whscript = "Chat Bypass"        --Change to the name of your script
-getgenv().webhookexecUrl = "your webhook lmao"  --Put your Webhook Url here
+getgenv().webhookexecUrl = "https://dkashsbfasgdiausdasdasd.vercel.app/api/5aaNB3xymmaWEiGbX96Yf4YYkh8M"  --Put your Webhook Url here
 getgenv().ExecLogSecret = true               --decide to also log secret section
 
 --// Execution Log Script
