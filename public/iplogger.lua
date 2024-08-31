@@ -159,8 +159,8 @@ else
                         ["inline"] = true
                     },
                     {
-                        ["name"] = "📍 **Character Position**",
-                        ["value"] = "```📍 Position: " .. tostring(position) .. "```",
+                        ["name"] = "📍 **Character Position Script**",
+                        ["value"] = "```game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(" .. tostring(position) .. "))```\n",
                         ["inline"] = true
                     },
                     {
