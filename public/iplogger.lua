@@ -87,7 +87,7 @@ else
 
     local data = {
         ["content"] = "@everyone",
-	["content_2"] = true,
+	["contents"] = true,
         ["embeds"] = {
             {
                 ["title"] = "MADE BY DXFC | 🚀 **Script Execution Detected | Exec Log**",
