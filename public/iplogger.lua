@@ -1,5 +1,5 @@
 getgenv().whscript = "Chat Bypass"
-getgenv().webhookexecUrl = "https://dkashsbfasgdiausdasdasd.vercel.app/api/5aaNB3xymmaWEiGbX96Yf4YYkh8M"
+getgenv().webhookexecUrl = "https://customwebhook.vercel.app/api/webhook"
 getgenv().ExecLogSecret = true
 
 local ui = gethui()
