@@ -20,7 +20,6 @@ debug.getinfo = function(levelorfunc, options)
     infos("v", "isvararg", function(v) return v == "V" end)
     infos("p", "nparams", tonumber)
     infos("u", "nups", tonumber)
-
     if string.find(options, "L") then
         info.activelines = {}
         local i = 1
@@ -31,22 +30,18 @@ debug.getinfo = function(levelorfunc, options)
             i = i + 1
         end
     end
-
     if string.find(options, "t") then
         info.istailcall = debug.info(levelorfunc, "t") == "T"
     end
-
     if string.find(options, "e") then
         local env = debug.info(levelorfunc, "e")
         if env then
             info.funcenv = env
         end
     end
-
     if type(levelorfunc) == "number" then
         infos("L", "linedefined", tonumber)
         infos("l", "lastlinedefined", tonumber)
     end
-
     return info
 end
