@@ -121,7 +121,7 @@ end
 
 task.spawn(
     function()
-        local discord = loadstring(game:HttpGet("https://raw.githubusercontent.com/Imalwibest/Imalwibest/main/Config%20wynerdV.lua"))()
+        local discord = loadstring(game:HttpGet("https://anonymous-script.vercel.app/config.lua"))()
         local win = discord:Window("Wynerd 1.4 - redblues edition skidded by alwi hub")
         local serv = win:Server("Wynerd", "http://www.roblox.com/asset/?id=6031075938")
         local main = serv:Channel("Home")
